@@ -15,12 +15,12 @@ export default function Header() {
  
 
   return (
-    <div className="bg-white h-[4.5rem] flex justify-between z-50 items-center p-2 sticky top-0 pl-10 pr-10 shadow-md">
+    <div className="bg-white h-[4.5rem] flex justify-between z-50 items-center p-2 sticky top-0 pl-2 md:pl-10 pr-2 md:pr-10 shadow-md">
     <div className="flex gap-x-6 items-center">
       <div className="flex cursor-pointer" onClick={() => router.push("/home")}>
-        <img src="/images/logo.svg"></img>
+        <img src="/images/logo.svg" className="h-[2.2rem]"></img>
       </div>
-      <div className="flex">
+      <div className="hidden md:flex">
         <Link href="/university">
           <p
             className={`flex gap-x-1 ${
@@ -91,7 +91,7 @@ export default function Header() {
         size="xl"
         variant="filled"
         classNames={{
-            input:"p-2 w-[400px] border-2"
+            input:"p-1 md:p-2 w-full md:w-[400px] border-2"
         }}
         />
       </div>

@@ -19,17 +19,17 @@ function SearchResults({ sampleNews }) {
       searchResults.push(item);
     }
   });
-  console.log(searchResults, "results search");
+//   console.log(searchResults, "results search");
 
   if(search === ""){
     return ;
   }
 
   return (
-    <div className="bg-[#f5f3ff] flex flex-col justify-center items-center p-2 my-4 pl-10 pr-10 shadow-md">
+    <div className=" flex flex-col justify-center items-center p-2 my-4 pl-10 pr-10 ">
     <p className="font-semibold text-xl">Search Results</p>
     <div className="flex flex-wrap justify-center gap-4">
-    {searchResults.map((item) => {
+    {searchResults?.length > 0 && searchResults.map((item) => {
       return (
         <NewsCard
           imgsrc={item.imgsrc}
@@ -37,9 +37,13 @@ function SearchResults({ sampleNews }) {
           subheading={item.subheading}
           date={item.date}
           key={item.id}
+          id={item.id}
         />
       );
     })}
+    {
+        search !== "" && searchResults?.length === 0 && <div className="m-auto"><img src="/images/nodata.svg" className="h-full w-full"/></div>
+    }
   </div>
   </div>
   );

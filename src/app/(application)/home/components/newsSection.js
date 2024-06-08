@@ -10,9 +10,9 @@ function NewsSection({ sampleNews }) {
 
 
   return (
-    <div className="bg-[#f5f3ff] flex justify-center items-center p-2 top-0 pl-10 pr-10 shadow-md">
+    <div className="bg-[#f5f3ff] flex justify-center items-center p-2 top-0 pl-5 md:pl-10 pr-5 md:pr-10 shadow-md">
       <Tabs value={activeTab} onChange={setActiveTab}>
-        <Tabs.List className="!flex  rounded-lg bg-white w-[50vw] mx-auto p-3 justify-around my-6 shadow-sm">
+        <Tabs.List className="!flex  rounded-lg bg-white md:w-[50vw] mx-auto p-3 justify-around my-6 shadow-sm">
           <Tabs.Tab value="all"><p className={`${activeTab==='all' ? 'font-semibold border-b-2' : 'font-normal'} transition-all`}>All News</p></Tabs.Tab>
           <Tabs.Tab value="college"><p className={`${activeTab==='college' ? 'font-semibold border-b-2' : 'font-normal'}`}>College News</p></Tabs.Tab>
           <Tabs.Tab value="exam"><p className={`${activeTab==='exam' ? 'font-semibold border-b-2' : 'font-normal'}`}>Exam News</p></Tabs.Tab>
@@ -29,6 +29,7 @@ function NewsSection({ sampleNews }) {
                   subheading={item.subheading}
                   date={item.date}
                   key={item.id}
+                  id={item.id}
                 />
               );
             })}
@@ -45,6 +46,7 @@ function NewsSection({ sampleNews }) {
                   subheading={item.subheading}
                   date={item.date}
                   key={item.id}
+                  id={item.id}
                 />
               );
             }
@@ -62,6 +64,7 @@ function NewsSection({ sampleNews }) {
                   subheading={item.subheading}
                   date={item.date}
                   key={item.id}
+                  id={item.id}
                 />
               );
             }
@@ -79,6 +82,7 @@ function NewsSection({ sampleNews }) {
                   subheading={item.subheading}
                   date={item.date}
                   key={item.id}
+                  id={item.id}
                 />
               );
             }

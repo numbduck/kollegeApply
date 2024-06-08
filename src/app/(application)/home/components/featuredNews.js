@@ -1,13 +1,13 @@
 function FeaturedNews({sampleNews}) {
   return (
-    <div className="flex flex-col gap-y-4  items-center p-4 top-0 ml-10 mr-10 my-4 bg-[#E0AD4C] bg-opacity-5 rounded-lg border-2">
+    <div className="flex flex-col gap-y-4  items-center p-4 top-0 ml-5 md:ml-10 mr-5 md:mr-10  my-4 bg-[#E0AD4C] bg-opacity-5 rounded-lg border-2">
       <div className="flex justify-between items-center w-full">
         <p className="text-[#E0AD4C] font-semibold italic">FEATURED NEWS</p>
         <div>
           <img src="/icons/rightarrow.svg" />
         </div>
       </div>
-      <div className="flex justify-around">
+      <div className="flex justify-around flex-col md:flex-row">
         {sampleNews.map((item ,index) => {
             if(index<4){
                 return (
