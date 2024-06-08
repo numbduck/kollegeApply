@@ -11,11 +11,11 @@ function Subheader() {
         <div className="flex gap-x-1"><p className="text-[12px]">Check Now </p> <img src="/icons/rightarrow.svg"/></div>
       </div>
       <div className="flex gap-x-2 text-[11px]">
-        <Button >All News</Button>
-        <Button variant="outline">Admission Alert</Button>
-        <Button variant="outline">College News</Button>
-        <Button variant="outline">Exam News</Button>
-        <Button variant="outline">Latest News</Button>
+        <Button variant="light" className="p-1">All News</Button>
+        <Button variant="light" className="p-1">Admission Alert</Button>
+        <Button variant="light" className="p-1">College News</Button>
+        <Button variant="light" className="p-1">Exam News</Button>
+        <Button variant="light" className="p-1">Latest News</Button>
       </div>
     </div>
   );

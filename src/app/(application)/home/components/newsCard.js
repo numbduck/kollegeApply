@@ -1,14 +1,14 @@
 
 function NewsCard({imgsrc, heading ,subheading, date}) {
   return (
-    <div className=" flex flex-col w-[308px] h-[351px] p-2">
-            <div><img src={imgsrc} className="h-[100px]"/></div>
+    <div className=" flex flex-col w-[308px] h-[351px] p-2 justify-between shadow-md rounded-md">
+            <div><img src={imgsrc} className="w-[284px] h-[233px]" /></div>
             <div className="flex flex-col gap-y-1 cursor-pointer" >
-              <p className="text-black_text font-semibold text-[12px]">
+              <p className="text-black_text font-semibold text-[14px]">
                 {heading}
               </p>
-              <p className="text-black_text text-[11px]">{subheading}</p>
-              <p className="text-black_text text-[11px]">{date}</p>
+              <p className="text-black_text text-[12px]">{subheading}</p>
+              <p className="text-[#B4B7C1] text-[12px]">{date}</p>
             </div>
     </div>
   )
