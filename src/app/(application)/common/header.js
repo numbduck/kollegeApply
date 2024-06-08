@@ -1,19 +1,18 @@
 "use client";
 
-import { Input, Popover } from "@mantine/core";
+import { Input } from "@mantine/core";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { useSearch } from "../context/searchContext";
+
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [searchValue, setSearchValue] = useState("")
-
-  const handleSearch =()=> {
-    console.log(searchValue,"sarch")
-  }
+  const { search, setSearch} = useSearch();
+ 
 
   return (
     <div className="bg-white h-[4.5rem] flex justify-between z-50 items-center p-2 sticky top-0 pl-10 pr-10 shadow-md">
@@ -83,12 +82,12 @@ export default function Header() {
   
           <img
             src="/icons/Search.svg"
-            onClick={handleSearch}
+            // onClick={}}
             className="cursor-pointer flex"
           />
         <Input placeholder="Search for Colleges, Exams, Courses & more... "
-        value={searchValue}
-        onChange={(event) => setSearchValue(event.currentTarget.value)}
+        // value={search}
+        onChange={(event) => {setSearch(event.target.value)}}
         size="xl"
         variant="filled"
         classNames={{

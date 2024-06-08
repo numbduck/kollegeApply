@@ -1,6 +1,10 @@
 
 
+
 function Landing({sampleNews}) {
+
+
+
   return (
     <div className="bg-white flex justify-around items-center p-2 top-0 pl-10 pr-10 my-4 ">
       <div className='flex flex-col w-[50vw] h-auto p-4 gap-y-4'>
